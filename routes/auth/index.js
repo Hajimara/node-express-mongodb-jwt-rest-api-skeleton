@@ -6,4 +6,3 @@ const auth = express.Router();
 auth.post('/login', authCtrl.login);
 
 export default auth;
-

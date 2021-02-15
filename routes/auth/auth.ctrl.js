@@ -1,8 +1,7 @@
-
-export const login = (req, res, next) => {
+export const login = (req, res) => {
   console.log('login');
 
   return res.status(200).send({
-      message: 'success'
+    message: 'success',
   });
 };
