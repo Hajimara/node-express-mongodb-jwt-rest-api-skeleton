@@ -1,11 +1,15 @@
 // global
+import dotenv from 'dotenv';
 import express from 'express';
 import path from 'path';
 import morgan from 'morgan';
+import cors from 'cors';
 
 // local
 import router from './routes';
 import connect from './schemas';
+
+dotenv.config();
 
 const app = express();
 
@@ -15,6 +19,7 @@ app.use(morgan('dev'));
 // body-parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 app.use('/api', router);
 

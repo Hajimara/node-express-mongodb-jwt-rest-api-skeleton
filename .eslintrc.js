@@ -1,19 +1,22 @@
 module.exports = {
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
   },
-  "extends": ['airbnb'],
-  "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true
+  extends: ['airbnb'],
+  env: {
+    browser: true,
+    node: true,
+    mocha: true,
   },
-    "rules": {
-    "max-length": 0 // 0으로 설정하면 에러 검출 X
+  rules: {
+    'max-length': 0, // 0으로 설정하면 에러 검출 X
+    'consistent-return': 0,
+    'no-underscore-dangle': 0,
   },
-  "plugins": ['import'],
-  "globals": {
-    "$": true
-  }
-}
+  plugins: ['import'],
+  globals: {
+    $: true,
+  },
+};
