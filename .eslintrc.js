@@ -14,6 +14,8 @@ module.exports = {
     'max-length': 0, // 0으로 설정하면 에러 검출 X
     'consistent-return': 0,
     'no-underscore-dangle': 0,
+    'no-trailing-spaces': 0,
+    'no-param-reassign': 0
   },
   plugins: ['import'],
   globals: {

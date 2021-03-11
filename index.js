@@ -8,12 +8,14 @@ import cors from 'cors';
 // local
 import router from './routes';
 import connect from './schemas';
+import ws from './webSocket';
 
 dotenv.config();
 
 const app = express();
 
 app.use('/', express.static(path.join((__dirname, 'public'))));
+app.use('/websocket', express.static(path.join((__dirname, 'public/websocket.html'))));
 
 app.use(morgan('dev'));
 // body-parser
@@ -30,6 +32,8 @@ app.use((err, req, res, next) => {
 
 connect();
 
-app.listen(process.env.APIPORT || 3333, () => {
+const server = app.listen(process.env.APIPORT || 3333, () => {
   console.log('APIServer IS RUNNING, TALKING TO API SERVER ON 3333');
 });
+
+ws(server);
