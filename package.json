@@ -18,7 +18,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.16",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "ws": "^7.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
