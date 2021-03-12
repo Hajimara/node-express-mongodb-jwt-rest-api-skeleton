@@ -15,7 +15,7 @@ const socket = (server) => {
     });
     ws.on('close', () => {
       console.log('Disconnect Client', ip);
-      clearImmediate(ws.interval);
+      clearInterval(ws.interval);
     });
 
     ws.interval = setInterval(() => {
